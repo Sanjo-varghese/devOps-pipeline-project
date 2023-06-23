@@ -1,0 +1,22 @@
+#Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sanjo app
+  labels:
+    app: sanjo-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sanjo-app
+  template:
+    metadata:
+      labels:
+        app: sanjo-app
+    spec:
+      containers:
+      - name: 
+        image: 
+        ports:
+        - containerPort: 8080
